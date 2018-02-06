@@ -1,0 +1,40 @@
+#spring
+spring:
+  devtools:
+    restart:
+      enabled: false
+  output:
+    ansi:
+      enabled: always
+  zipkin:
+    enabled: true
+    base-url: http://10.12.21.171:2222/
+  sleuth:
+    sampler:
+      percentage: 1
+    enabled: true
+#eureka
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://admin:admin@10.12.21.171:1111/eureka
+  instance:
+    prefer-ip-address: true
+    health-check-url-path: /health
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+#feign
+feign:
+  compression:
+    request:
+      enabled: true
+      mime-types: text/xml;application/xml;application/json
+      min-request-size: 2048
+    response:
+      enabled: true
+  httpclient:
+    enable: true
+#info
+info:
+  contact:
+    email: dongmai@fangdd.com
+    phone: 18616956630
