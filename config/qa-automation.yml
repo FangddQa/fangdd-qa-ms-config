@@ -125,4 +125,6 @@ ldap:
   basedn: dc=fangdd,dc=com
 #ci token
 citoken: 7a7dbfd4472f428e1949021bf42b9894
-
+management:
+  security:
+    enabled: false
