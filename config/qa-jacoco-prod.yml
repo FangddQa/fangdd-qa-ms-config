@@ -95,3 +95,6 @@ feign:
 management:
   security:
     enabled: false
+endpoints:
+  shutdown:
+    enabled: false
