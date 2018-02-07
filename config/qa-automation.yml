@@ -78,6 +78,7 @@ jenkins:
   url: http://10.0.4.116:8080/
   user: mizone
   key: 261090dong
+  node: master
 #git
 git:
   user: dongmai
