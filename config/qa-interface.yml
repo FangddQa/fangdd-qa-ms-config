@@ -38,3 +38,6 @@ info:
   contact:
     email: dongmai@fangdd.com
     phone: 18616956630
+management:
+  security:
+    enabled: false
