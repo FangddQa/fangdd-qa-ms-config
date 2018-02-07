@@ -92,3 +92,6 @@ info:
 feign:
   httpclient:
     enabled: true
+management:
+  security:
+    enabled: false
