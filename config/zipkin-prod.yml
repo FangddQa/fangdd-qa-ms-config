@@ -19,7 +19,7 @@ zipkin:
     type: elasticsearch
     elasticsearch:
       cluster: elasticsearch-zipkin-cluster
-      hosts: 10.12.21.123:9200
+      hosts: http://10.12.21.123:9200
       max-requests: 64
       index: mizonezipkin
       index-shards: 5
