@@ -24,3 +24,9 @@ zipkin:
       index: mizonezipkin
       index-shards: 5
       index-replicas: 1
+management:
+  security:
+    enabled: false
+endpoints:
+  shutdown:
+    enabled: false
