@@ -1,0 +1,26 @@
+#eureka
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://admin:admin@10.12.21.171:1111/eureka
+  instance:
+    prefer-ip-address: true
+    health-check-url-path: /health
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+#info
+info:
+  contact:
+    email: dongmai@fangdd.com
+    phone: 18616956630
+#表示zipkin数据存储方式是elasticsearch
+zipkin:
+  storage:
+    StorageComponent: elasticsearch
+    type: elasticsearch
+    elasticsearch:
+      cluster: elasticsearch-zipkin-cluster
+      hosts: 10.12.21.123:9200
+      max-requests: 64
+      index: mizonezipkin
+      index-shards: 5
+      index-replicas: 1
