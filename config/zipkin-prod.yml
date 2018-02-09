@@ -21,7 +21,7 @@ zipkin:
       cluster: elasticsearch-zipkin-cluster
       hosts: http://10.12.21.123:9200
       max-requests: 64
-      index: mizonezipkin
+      index: zipkin
       index-shards: 5
       index-replicas: 1
 management:
