@@ -29,9 +29,10 @@ management:
     enabled: false
 endpoints:
   shutdown:
-    enabled: false
-rabbitmq:
-  host: 10.12.18.2
-  port: 15672
-  username: guest
-  password: guest
+     enabled: false
+spring:
+  rabbitmq:
+    host: 10.12.18.2
+    port: 15672
+    username: guest
+    password: guest
