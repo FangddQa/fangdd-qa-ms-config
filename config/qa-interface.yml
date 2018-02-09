@@ -8,7 +8,7 @@ spring:
       enabled: always
   zipkin:
     enabled: true
-    base-url: http://10.12.21.171:2222/
+    #base-url: http://10.12.21.171:2222/
   sleuth:
     sampler:
       percentage: 1
