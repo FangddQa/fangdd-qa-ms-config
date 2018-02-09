@@ -13,6 +13,11 @@ spring:
     sampler:
       percentage: 1
     enabled: true
+  rabbitmq:
+    host: 10.12.18.2
+    port: 15672
+    username: guest
+    password: guest
 #eureka
 eureka:
   client:
