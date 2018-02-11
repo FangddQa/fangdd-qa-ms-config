@@ -14,7 +14,7 @@ spring:
       percentage: 1
     enabled: true
   rabbitmq:
-    host: 10.12.18.2
+    host: 10.12.18.3
     port: 15672
     username: guest
     password: guest
