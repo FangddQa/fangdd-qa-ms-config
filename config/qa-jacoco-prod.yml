@@ -30,7 +30,12 @@ spring:
       percentage: 1
   zipkin:
     enabled: true
-    base-url: http://10.12.21.171:2222/
+    #base-url: http://10.12.21.171:2222/
+  rabbitmq:
+    host: 10.12.18.4
+    post: 5672
+    username: admin
+    password: 12345
 #mybatis
 mybatis-plus:
   mapper-locations: classpath:/mapper/**.xml
