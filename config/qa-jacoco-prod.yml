@@ -32,7 +32,7 @@ spring:
     enabled: true
     #base-url: http://10.12.21.171:2222/
   rabbitmq:
-    host: 10.12.18.4
+    host: 10.0.4.108
     post: 5672
     username: admin
     password: 123456
