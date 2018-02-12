@@ -32,7 +32,7 @@ endpoints:
     enabled: false
 spring:
   rabbitmq:
-    host: 10.12.18.4
+    host: 10.0.4.108
     port: 5672
     username: admin
     password: 123456
