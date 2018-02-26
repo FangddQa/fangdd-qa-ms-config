@@ -100,8 +100,15 @@ info:
     phone: 18616956630
 #feign
 feign:
+  compression:
+    request:
+      enabled: true
+      mime-types: text/xml;application/xml;application/json
+      min-request-size: 2048
+    response:
+      enabled: true
   httpclient:
-    enabled: true
+    enable: true
 #file server
 file:
   server: http://10.12.21.161:9999
