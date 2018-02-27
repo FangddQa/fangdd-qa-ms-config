@@ -2,7 +2,7 @@
 spring:
   output:
     ansi:
-      enabled: always
+      enabled: never
   datasource:
     url: jdbc:mysql://10.12.21.161/taas?useUnicode=true&characterEncoding=utf8&rewriteBatchedStatements=true&useSSL=false
     driver-class-name: com.mysql.jdbc.Driver
