@@ -5,7 +5,7 @@ spring:
       enabled: false
   output:
     ansi:
-      enabled: always
+      enabled: false
   zipkin:
     enabled: true
     #base-url: http://10.12.21.171:2222/
