@@ -1,0 +1,45 @@
+#spring
+spring:
+  devtools:
+    restart:
+      enabled: false
+  output:
+    ansi:
+      enabled: never
+  sleuth:
+    enabled: true
+    sampler:
+      percentage: 1
+  zipkin:
+    enabled: true
+#eureka
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://admin:admin@10.12.21.171:1111/eureka
+  instance:
+    prefer-ip-address: true
+    health-check-url-path: /health
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+#dingding
+dingding:
+  report: https://oapi.dingtalk.com/robot/send?access_token=4cc59abae8e9ec15fdac93723a3161f92fdb1e336730946ae50b3717945f1176
+  warnning: https://oapi.dingtalk.com/robot/send?access_token=339419ba677caf2693649f40c4fcb867cd75c35e919efb1af63ee31ec54e9be6
+#info
+info:
+  contact:
+    email: dongmai@fangdd.com
+    phone: 18616956630
+#feign
+feign:
+  httpclient:
+    enabled: true
+#file server
+file:
+  server: http://10.12.21.161:9999
+management:
+  security:
+    enabled: false
+endpoints:
+  shutdown:
+    enabled: false
