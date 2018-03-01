@@ -12,6 +12,11 @@ spring:
       percentage: 1
   zipkin:
     enabled: true
+  rabbitmq:
+    host: 10.0.4.108
+    port: 5672
+    username: admin
+    password: 123456
 #eureka
 eureka:
   client:
