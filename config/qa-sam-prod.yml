@@ -17,6 +17,27 @@ spring:
     port: 5672
     username: admin
     password: 123456
+  datasource:
+    url: jdbc:mysql://10.12.21.161/taas?useUnicode=true&characterEncoding=utf8&rewriteBatchedStatements=true&useSSL=false
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 261090dong
+    type: com.alibaba.druid.pool.DruidDataSource
+    ##连接池属性配置
+    initialSize: 5
+    minIdle: 5
+    maxActive: 20
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 1 FROM DUAL
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxPoolPreparedStatementPerConnectionSize: 20
+    filters: stat,wall,log4j
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
 #eureka
 eureka:
   client:
