@@ -25,7 +25,7 @@ eureka:
   instance:
     prefer-ip-address: true
     health-check-url-path: /health
-    instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+    instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${server.port}
 #dingding
 dingding:
   report: https://oapi.dingtalk.com/robot/send?access_token=4cc59abae8e9ec15fdac93723a3161f92fdb1e336730946ae50b3717945f1176
