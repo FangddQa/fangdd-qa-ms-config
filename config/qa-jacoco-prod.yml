@@ -73,7 +73,7 @@ eureka:
   instance:
     prefer-ip-address: true
     health-check-url-path: /health
-    instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+    instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${server.port}
 #jenkins
 jenkins:
   server: 10.0.4.116:8080
