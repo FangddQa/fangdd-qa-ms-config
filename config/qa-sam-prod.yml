@@ -99,5 +99,5 @@ endpoints:
   shutdown:
     enabled: false
 token: e5456eabf8d35fe17d86eb3b894f8ea9
-warning: https://oapi.dingtalk.com/robot/send?access_token=339419ba677caf2693649f40c4fcb867cd75c35e919efb1af63ee31ec54e9be6
-#warning: https://oapi.dingtalk.com/robot/send?access_token=4cc59abae8e9ec15fdac93723a3161f92fdb1e336730946ae50b3717945f1176
+#warning: https://oapi.dingtalk.com/robot/send?access_token=339419ba677caf2693649f40c4fcb867cd75c35e919efb1af63ee31ec54e9be6
+warning: https://oapi.dingtalk.com/robot/send?access_token=4cc59abae8e9ec15fdac93723a3161f92fdb1e336730946ae50b3717945f1176
