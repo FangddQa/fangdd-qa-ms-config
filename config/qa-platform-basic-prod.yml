@@ -112,6 +112,10 @@ ldap:
   account: cn=readdomain,ou=musers,dc=fangdd,dc=com
   key: fang@123
   basedn: dc=fangdd,dc=com
+  ou1: 房多多网络科技有限公司
+  ou2: UGC
+  ou3: TEC
+  ou5: TQPE 
 #ci token
 citoken: 7a7dbfd4472f428e1949021bf42b9894
 management:
