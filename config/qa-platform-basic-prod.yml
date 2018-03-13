@@ -113,7 +113,7 @@ ldap:
   key: fang@123
   basedn: dc=fangdd,dc=com
   ou1: 房多多网络科技有限公司
-  ou2: UGC
+  ou2: 产品研发中心
   ou3: TEC
   ou5: TQPE 
 #ci token
