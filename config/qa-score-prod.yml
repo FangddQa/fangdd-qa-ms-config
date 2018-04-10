@@ -92,7 +92,7 @@ feign:
 #file server
 file:
   server: http://10.12.21.161:9999
-test: test1
+test: test
 #ftp server
 ftp:
   ip: 10.12.21.161
