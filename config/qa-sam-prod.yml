@@ -1,0 +1,103 @@
+#spring
+spring:
+  devtools:
+    restart:
+      enabled: false
+  output:
+    ansi:
+      enabled: never
+  sleuth:
+    enabled: true
+    sampler:
+      percentage: 1
+  zipkin:
+    enabled: true
+  rabbitmq:
+    host: 10.0.4.108
+    port: 5672
+    username: admin
+    password: 123456
+  datasource:
+    url: jdbc:mysql://10.12.21.161/taas?useUnicode=true&characterEncoding=utf8&rewriteBatchedStatements=true&useSSL=false
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 261090dong
+    type: com.alibaba.druid.pool.DruidDataSource
+    ##连接池属性配置
+    initialSize: 5
+    minIdle: 5
+    maxActive: 20
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 1 FROM DUAL
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxPoolPreparedStatementPerConnectionSize: 20
+    filters: stat,wall,log4j
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+#mybatis
+mybatis-plus:
+  mapper-locations: classpath:/mapper/**/**.xml
+  #实体扫描，多个package用逗号或者分号分隔
+  typeAliasesPackage: com.fangdd.samserver.dto
+  #typeEnumsPackage: com.fangdd.qainterface.enums
+  global-config:
+    #主键类型  0:"数据库ID自增", 1:"用户输入ID",2:"全局唯一ID (数字类型唯一ID)", 3:"全局唯一ID UUID";
+    id-type: 0
+    #字段策略 0:"忽略判断",1:"非 NULL 判断"),2:"非空判断"
+    field-strategy: 2
+    #驼峰下划线转换
+    db-column-underline: true
+    #刷新mapper 调试神器
+    refresh-mapper: true
+    #数据库大写下划线转换
+    #capital-mode: true
+    #序列接口实现类配置
+    #key-generator: com.baomidou.springboot.xxx
+    #逻辑删除配置
+    logic-delete-value: 1
+    logic-not-delete-value: 0
+    #自定义填充策略接口实现
+    #meta-object-handler: com.baomidou.springboot.xxx
+    #自定义SQL注入器
+    sql-injector: com.baomidou.mybatisplus.mapper.LogicSqlInjector
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+#eureka
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://admin:admin@10.12.21.171:1111/eureka
+  instance:
+    prefer-ip-address: true
+    health-check-url-path: /health
+    instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${server.port}
+#dingding
+dingding:
+  report: https://oapi.dingtalk.com/robot/send?access_token=4cc59abae8e9ec15fdac93723a3161f92fdb1e336730946ae50b3717945f1176
+  warnning: https://oapi.dingtalk.com/robot/send?access_token=339419ba677caf2693649f40c4fcb867cd75c35e919efb1af63ee31ec54e9be6
+#info
+info:
+  contact:
+    email: dongmai@fangdd.com
+    phone: 18616956630
+#feign
+feign:
+  httpclient:
+    enabled: true
+#file server
+file:
+  server: http://10.12.21.161:9999
+management:
+  security:
+    enabled: false
+endpoints:
+  shutdown:
+    enabled: false
+token: e5456eabf8d35fe17d86eb3b894f8ea9
+#warning: https://oapi.dingtalk.com/robot/send?access_token=339419ba677caf2693649f40c4fcb867cd75c35e919efb1af63ee31ec54e9be6
+warning: https://oapi.dingtalk.com/robot/send?access_token=4cc59abae8e9ec15fdac93723a3161f92fdb1e336730946ae50b3717945f1176
