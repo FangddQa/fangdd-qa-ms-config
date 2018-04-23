@@ -125,3 +125,4 @@ management:
 endpoints:
   shutdown:
     enabled: false
+sendDoTestMessage: false
